@@ -1,0 +1,19 @@
+{
+  "name": "copy-with-ansi-codes",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@webcontainer/api": "^1.1.5",
+    "xterm": "^5.2.1",
+    "xterm-addon-serialize": "^0.10.0"
+  }
+}
