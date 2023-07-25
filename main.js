@@ -88,7 +88,9 @@ window.addEventListener("load", async () => {
 
 function handleButtonClick() {
   const content = serializeAddon.serialize();
-  navigator.clipboard.writeText(content);
+  // remove trailing codes because of https://github.com/blake-mealey/ansi-sequence-parser/issues/1
+  const contentWithoutTrailingCodes = content.replace("[?2004h", "");
+  navigator.clipboard.writeText(contentWithoutTrailingCodes);
   copyButton.textContent = "Copied!";
   setTimeout(() => {
     updateButtonText();
