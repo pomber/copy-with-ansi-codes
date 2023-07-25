@@ -7,6 +7,9 @@ import { SerializeAddon } from "./serialize-addon";
 
 async function startShell() {
   const shellProcess = await webcontainerInstance.spawn("jsh");
+
+  document.querySelector("#app").style.opacity = 1;
+
   shellProcess.output.pipeTo(
     new WritableStream({
       write(data) {
@@ -47,6 +50,7 @@ window.addEventListener("load", async () => {
     cols: 80,
     cursorBlink: true,
     allowProposedApi: true,
+    fontFamily: "Fira Code, monospace",
     theme: {
       background: "#0d1117",
       foreground: "#c9d1d9",
