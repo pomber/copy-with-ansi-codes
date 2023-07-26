@@ -51,6 +51,7 @@ window.addEventListener("load", async () => {
     cursorBlink: true,
     allowProposedApi: true,
     fontFamily: "Fira Code, monospace",
+    rows: 30,
     theme: {
       background: "#0d1117",
       foreground: "#c9d1d9",
